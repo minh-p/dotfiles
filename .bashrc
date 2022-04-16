@@ -20,3 +20,22 @@ alias updateconfig='config submodule foreach git pull'
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
+
+# Timer!
+countdown() {
+    start="$(( $(date '+%s') + $1))"
+    while [ $start -ge $(date +%s) ]; do
+        time="$(( $start - $(date +%s) ))"
+        printf '%s\r' "$(date -u -d "@$time" +%H:%M:%S)"
+        sleep 0.1
+    done
+}
+
+stopwatch() {
+    start=$(date +%s)
+    while true; do
+        time="$(( $(date +%s) - $start))"
+        printf '%s\r' "$(date -u -d "@$time" +%H:%M:%S)"
+        sleep 0.1
+    done
+}
