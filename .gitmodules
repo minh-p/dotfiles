@@ -1,0 +1,24 @@
+[submodule "MinimalNvim"]
+	path = MinimalNvim
+	url = https://github.com/minh-p/MinimalNvim
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:minh-p/MinimalNvim.git
+[submodule ".config/emacs"]
+	path = .config/emacs
+	url = git@github.com:minh-p/emacs_config.git
+[submodule ".config/alacritty"]
+	path = .config/alacritty
+	url = git@github.com:minh-p/config-alacritty.git
+[submodule ".local/src/dwm"]
+	path = .local/src/dwm
+	url = git@github.com:minh-p/dwm-2.git
+[submodule ".local/src/dwmblocks"]
+	path = .local/src/dwmblocks
+	url = git@github.com:minh-p/dwmblocks.git
+[submodule "mydmenu"]
+	path = mydmenu
+	url = git@github.com:minh-p/mydmenu.git
+[submodule ".local/src/dmenu"]
+	path = .local/src/dmenu
+	url = git@github.com:minh-p/mydmenu.git
