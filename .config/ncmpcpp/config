@@ -596,3 +596,4 @@ progressbar_look = --
 #
 #active_window_border = red
 #
+execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
