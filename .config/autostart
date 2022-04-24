@@ -20,5 +20,5 @@ exec nitrogen --restore &
 exec dunst &
 exec mappings &
 exec dwmblocks &
-exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') &
+exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') -b 0.60:0.70 &
 exec mpd_discord_richpresence &
