@@ -40,3 +40,11 @@ stopwatch() {
         sleep 0.1
     done
 }
+
+# start web server
+startpythonwebserver() {
+    cd $1
+    python -m http.server $2 &> /dev/null &
+    sleep 1
+    cd
+}
