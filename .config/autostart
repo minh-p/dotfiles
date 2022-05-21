@@ -13,7 +13,7 @@ check_process_pkill() {
 check_process_killall dwmblocks
 check_process_pkill redshift
 check_process_pkill dunst
-check_process_killall mpd_discord_richpresence
+check_process_killall mpd-discord-rpc
 
 exec picom --experimental-backends &
 exec nitrogen --restore &
@@ -21,4 +21,5 @@ exec dunst &
 exec mappings &
 exec dwmblocks &
 exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') -b 0.60:0.70 &
+exec mpd-discord-rpc &
 startpythonwebserver "/home/hmp/.local/src/nightly/" 4200 &
