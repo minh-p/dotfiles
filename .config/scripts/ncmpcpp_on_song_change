@@ -2,4 +2,6 @@
 notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
 if [ -z $(pgrep -n mpd-discord-rpc) ]; then
     exec mpd-discord-rpc &
+    killall ncmpcpp
+    exec ncmpcpp
 fi
