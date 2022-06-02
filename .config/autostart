@@ -14,6 +14,7 @@ check_process_killall dwmblocks
 check_process_pkill redshift
 check_process_pkill dunst
 check_process_killall mpd-discord-rpc
+check_process_killall easyeffects
 
 exec picom --experimental-backends &
 exec nitrogen --restore &
@@ -22,4 +23,5 @@ exec mappings &
 exec dwmblocks &
 exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"') -b 0.60:0.70 &
 exec mpd-discord-rpc &
+exec easyeffects --gapplication-service &
 startpythonwebserver "/home/hmp/.local/src/nightly/" 4200 &
