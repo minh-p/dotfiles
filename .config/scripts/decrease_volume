@@ -1,0 +1,3 @@
+#!/bin/bash
+pamixer --decrease 1
+# notify-send "Current Volume" "$(pamixer --get-volume)"
