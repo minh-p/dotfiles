@@ -1,0 +1,171 @@
+/**
+    * @name SolarizedThiscourd
+    * @version 1.0
+    * @description My customized version of Kaynooo#8080's VibrantGlass theme
+    * @author FrodoSpark#9485
+    *
+    * @source https://github.com/Kayno0o/vibrant-glass-theme
+**/
+@import url("https://raw.githack.com/Kayno0o/vibrant-glass-theme/main/glass_remote.theme.css");
+
+/*
+to customize rgb color : https://www.google.com/search?q=color+picker and copy the RGB thing
+to create custom gradient : https://cssgradient.io/ and copy the linear-gradient
+*/
+/* DEFINE MAIN VARIABLES */
+.theme-dark {
+    /*
+    name of the Discord window (top left)
+    default : "Vibrant Glass" */
+    --window-name: "thiscourd";
+    /*
+    color of the Discord window name
+    default : rgb(255, 255, 255) */
+    --window-name-color: rgb(255, 255, 255);
+    /*
+    opacity, but lighter
+    default : 0.2 */
+    --light-opacity: 0.5;
+    /*
+    opacity used everywhere to make this glass effect 
+    default : 0.5 */
+    --opacity: 0.8;
+    /*
+    opacity, but darker
+    default : 0.75 */
+    --dark-opacity: 0.75;
+    /*
+    it's just the Discord background URL, it has to be a direct link (ending with .png, .jpg, .gif)
+    default : url('https://cdn.discordapp.com/attachments/696040243748536401/850445513542205531/1-IrFMpUu.png') */
+    --background-url: url('https://i.imgur.com/HtZzGpf.png');
+    /*
+    background color used for opacity
+    default : 0, 0, 0 */
+    --background-color: 7, 54, 66;
+/*
+    Solarized Rainbow Colors
+    */
+    --red: rgb(220, 50, 47);
+    --orange: rgb(203, 75, 22);
+    --yellow: rgb(181, 137, 0);
+    --green: rgb(133, 153, 0);
+    --cyan: rgb(42, 161, 152);
+    --blue: rgb(38, 139, 210);
+    --violet: rgb(108, 113, 196);
+    --magenta: rgb(211, 54, 130);
+    /*
+    Solarized Theme Colors
+    */
+    --backgroundDark: rgb(0, 43, 54);
+    --backgroundGray: rgb(88, 110, 117);
+    --backgroundLight: rgb(238, 232, 213);
+    --text: rgb(131, 148, 150);
+    /*
+    Imported code from source
+    */
+    --text-normal: rgb(131, 148, 150);
+    --header-primary: var(--text-normal);
+    --interactive-normal: var(--yellow);
+    --interactive-hover: var(--green);
+    --interactive-active: var(--green);
+    --header-secondary: var(--yellow);
+    --background-modifier-accent: var(--backgroundLight);
+    --text-muted: var(--text-normal);
+    --text-link: var(--cyan);
+    --text-positive: var(--green);
+    --text-positive-opacity: rgba(133, 223, 0, var(--opacity));
+    --interactive-muted: var(--text-normal);
+    --guild-header-text-shadow: none;
+    --normal-background: rgba(var(--background-color), var(--opacity));
+    --background-accent: var(--normal-background);
+    --background-primary: var(--normal-background);
+    --background-secondary: var(--normal-background);
+    --background-secondary-alt: var(--normal-background);
+    --background-tertiary: var(--normal-background);
+    --background-floating: var(--normal-background);
+    --scrollbar-auto-thumb: var(--normal-background);
+    --light-background: rgba(var(--background-color), var(--light-opacity));
+    --background-mentioned: var(--light-background);
+    --scrollbar-auto-track: var(--light-background);
+    --dark-background: rgba(var(--background-color), var(--dark-opacity));
+    --notification-color: 220, 50, 47;
+    --notification: rgb(var(--notification-color));
+    --notification-opacity: rgba(var(--notification-color), var(--dark-opacity));
+    --rainbow-gradient-width: 1px;
+    --rainbow-gradient: linear-gradient(135deg, rgba(220, 50, 47, 1) 0%, rgba(203, 75, 22, 1) 20%, rgba(181, 137, 0, 1) 40%, rgba(133, 153, 0, 1) 60%, rgba(38, 139, 210, 1) 80%, rgba(108, 113, 196, 1) 100%);
+    }
+
+/* BACKGROUND */
+
+.app-2rEoOp>.bg-h5JY_x {
+    background: var(--background-url) !important;
+    background-size: cover !important;
+}
+/* TITLE BAR */
+.titleBar-AC4pGV .wordmark-2iDDfm::after {
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 10px;
+    content: var(--window-name);
+    position: absolute;
+    background: var(--window-name-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 15px;
+    font-weight: normal;
+    top: 5px;
+    left: 20px;
+    width: 250px;
+}
+/* ------------------------------------------------------------ 🌱 WINDOWS BUTTONS ------------------------------------------------------------ */
+
+/* ---- Sizes and Locations ---- */
+.platform-win .typeWindows-1za-n7 {
+    height: 20px;
+    width: 100.45%;
+    top: -8px;
+    left: 0;
+    margin-top: 10;
+    position: relative;
+    background: transparent;
+}
+/* ---- Colors and Transitions ---- */
+.winButtonClose-1HsbF- {
+    transition: ease-out 0.4s;
+    color: var(--red);
+}
+.winButtonClose-1HsbF-:hover {
+    color: var(--red);
+    background-color: var(--backgroundLight);
+}
+.winButtonMinMax-PBQ2gm:nth-child(3) {
+    transition: ease-out 0.4s;
+    color: var(--yellow);
+}
+.winButtonMinMax-PBQ2gm:nth-child(3):hover {
+    background-color: var(--backgroundLight);
+}
+.winButtonMinMax-PBQ2gm:last-child {
+    transition: ease-out 0.4s;
+    color: var(--green);
+}
+.winButtonMinMax-PBQ2gm:last-child:hover {
+    background-color: var(--backgroundLight);
+}
+/* Add icons on the personal and server settings */
+@import url(https://kaiidoo.github.io/Newcord/src/stuff/icons.css);
+:root {
+    --border-radius-1: 16px;
+    --border-radius-2: 10px;
+    --border-radius-3: 5px;
+
+    --grey: #99aab5;
+    --bronze: #e4953c;
+
+    --usesettingsicons: calc(
+        var(--settingsicons, 1) /
+            (var(--settingsicons, 1) + 0.00000000000000000000001)
+    );
+    --settingsiconssize: 20px;
+    --settingsiconsgap: 10px;
+}
