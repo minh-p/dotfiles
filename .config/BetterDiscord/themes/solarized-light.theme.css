@@ -13,7 +13,7 @@ to customize rgb color : https://www.google.com/search?q=color+picker and copy t
 to create custom gradient : https://cssgradient.io/ and copy the linear-gradient
 */
 /* DEFINE MAIN VARIABLES */
-.theme-dark {
+.theme-light {
     /*
     name of the Discord window (top left)
     default : "Vibrant Glass" */
@@ -41,7 +41,7 @@ to create custom gradient : https://cssgradient.io/ and copy the linear-gradient
     /*
     background color used for opacity
     default : 0, 0, 0 */
-    --background-color: 7, 54, 66;
+    --background-color: 238, 232, 213;
 /*
     Solarized Rainbow Colors
     */
@@ -59,7 +59,7 @@ to create custom gradient : https://cssgradient.io/ and copy the linear-gradient
     --backgroundDark: rgb(0, 43, 54);
     --backgroundGray: rgb(88, 110, 117);
     --backgroundLight: rgb(238, 232, 213);
-    --text: rgb(131, 148, 150);
+    --text: rgb(117, 137, 139);
     /*
     Imported code from source
     */
