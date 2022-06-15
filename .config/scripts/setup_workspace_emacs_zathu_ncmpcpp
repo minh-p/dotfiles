@@ -1,0 +1,5 @@
+#!/bin/bash
+eclient &
+zathura &
+alacritty -e ncmpcpp &
+alacritty -e pipes.sh &
