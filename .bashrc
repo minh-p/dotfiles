@@ -17,8 +17,12 @@ export JOURNAL='/home/hmp/Documents/journal-entries';
 export MPD_HOST="localhost"
 alias updateconfig='config submodule foreach git pull'
 alias tmux='tmux -u'
+alias spotisearch='~/.local/src/Spotify-Headless/lib/search.js'
+alias spotiplay='~/.local/src/Spotify-Headless/lib/play.js'
 export PATH=$HOME/.cargo/bin:$PATH
 export TERM_TYPE=`pstree -As $$ | awk -F "---" '{print $2}'`
+export SPOTIFY_USER=""
+export SPOTIFY_PWD=""
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
