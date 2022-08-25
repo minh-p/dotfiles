@@ -242,4 +242,4 @@ schemes:
     color13: "#BAC3C6"
     color14: "#CED2D4"
     color15: "#e4e7e8"  
-colors: *sol_light
+colors: *sol_dark
