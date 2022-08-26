@@ -17,7 +17,7 @@ check_process_killall mpd-discord-rpc
 check_process_killall easyeffects
 check_process_killall fcitx5
 
-exec picom --experimental-backends &
+exec picom &
 exec nitrogen --restore &
 exec dunst &
 exec mappings &

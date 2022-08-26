@@ -7,7 +7,7 @@ shell:
 live_config_reload: true
 
 window:
-  opacity: 1
+  opacity: 0.9
 
 special:
     background: "#101210"
