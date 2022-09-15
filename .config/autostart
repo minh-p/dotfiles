@@ -26,5 +26,3 @@ exec redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?k
 exec mpd-discord-rpc &
 exec easyeffects --gapplication-service &
 exec fcitx5 -d &
-
-startpythonwebserver "/home/hmp/.local/src/nightly/" 4200 &
