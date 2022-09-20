@@ -1,4 +1,5 @@
 #!/bin/bash
 # For vim capslock esc mapping and setting key rate.
 xset r rate 500 50 &
+setxkbmap -option compose:ralt &
 xmodmap ~/.config/.xmodmapping &
