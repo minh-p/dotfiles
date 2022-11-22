@@ -2,3 +2,4 @@ allow_images=true
 term=kitty
 hide_scroll=true
 always_parse_args=true
+columns=2
