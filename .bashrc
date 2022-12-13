@@ -19,6 +19,7 @@ alias updateconfig='config submodule foreach git pull'
 alias tmux='tmux -u'
 export PATH=$HOME/.cargo/bin:$PATH
 export TERM_TYPE=`pstree -As $$ | awk -F "---" '{print $2}'`
+export QT_QPA_PLATFORM=wayland
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
@@ -50,9 +51,3 @@ startpythonwebserver() {
     sleep 1
     cd
 }
-
-# FCITX
-export GTK_IM_MODULE='fcitx'
-export QT_IM_MODULE='fcitx'
-export SDL_IM_MODULE='fcitx'
-export XMODIFIERS='@im=fcitx'

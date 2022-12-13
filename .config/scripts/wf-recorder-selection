@@ -1,2 +1,2 @@
 #!/bin/bash
-wf-recorder -g "$(slurp)"
+wf-recorder -a -g "$(slurp)"
