@@ -17,6 +17,7 @@ export JOURNAL='/home/hmp/Documents/journal-entries';
 export MPD_HOST="localhost"
 alias updateconfig='config submodule foreach git pull'
 alias tmux='tmux -u'
+alias doom='~/.config/emacs/bin/doom'
 export PATH=$HOME/.cargo/bin:$PATH
 export TERM_TYPE=`pstree -As $$ | awk -F "---" '{print $2}'`
 export QT_QPA_PLATFORM=wayland

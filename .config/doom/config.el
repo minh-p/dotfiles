@@ -34,6 +34,93 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-tokyo-night)
 
+(defun dw/org-mode-setup ()
+  (org-indent-mode t)
+  (variable-pitch-mode 1)
+  (auto-fill-mode 0)
+  (visual-line-mode 1)
+  (setq evil-auto-indent nil))
+
+
+(use-package org
+  :hook (org-mode . dw/org-mode-setup)
+  :config
+  (setq org-ellipsis " ▾"
+        org-hide-emphasis-markers t
+        org-pretty-entities t
+        org-clock-sound "~/.config/emacs/bell.wav"
+	org-startup-with-inline-images t
+	org-hide-leading-stars t
+	org-directory "~/org"
+	org-agenda-files '("Tasks.org" "Birthdays.org" "Habits.org")
+	org-agenda-start-with-log-mode t
+	org-log-done 'time
+	org-log-into-drawer t
+	org-todo-keywords
+	  '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)")
+	    (sequence "BACKLOG(b)" "PLAN(p)" "READY(r)" "ACTIVE(a)" "REVIEW(v)" "WAIT(w@/!)" "HOLD(h)" "|" "COMPLETED(c)" "CANC(k@)"))
+        ))
+
+(require 'org-faces)
+(with-eval-after-load 'org-faces)
+
+
+(dolist (face '((org-level-1 . 1.2)
+                (org-level-2 . 1.1)
+                (org-level-3 . 1.05)
+                (org-level-4 . 1.0)
+                (org-level-5 . 1.1)
+                (org-level-6 . 1.1)
+                (org-level-7 . 1.1)
+                (org-level-8 . 1.1)))
+    (set-face-attribute (car face) nil :font "JetBrainsMono Nerd Font" :weight 'regular :height (cdr face)))
+
+(org-babel-do-load-languages 'org-babel-load-languages
+    '(
+        (shell . t)
+    )
+)
+
+;; Make sure org-indent face is available
+(require 'org-indent)
+
+;; Ensure that anything that should be fixed-pitch in Org files appears that way
+(set-face-attribute 'org-block nil :foreground nil :inherit 'fixed-pitch)
+(set-face-attribute 'org-code nil   :inherit '(shadow fixed-pitch))
+(set-face-attribute 'org-indent nil :inherit '(org-hide fixed-pitch))
+(set-face-attribute 'org-verbatim nil :inherit '(shadow fixed-pitch))
+(set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
+(set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
+(set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-hide ((t nil))))
+(put 'downcase-region 'disabled nil)
+
+(with-eval-after-load 'org-superstar
+  (setq org-superstar-item-bullet-alist
+        '((?* . ?•)
+          (?+ . ?➤)
+          (?- . ?•)))
+  (setq org-superstar-headline-bullets-list '("⁖" "◉" "○" "✸" "✿"))
+  (setq org-superstar-special-todo-items t)
+  (setq org-superstar-remove-leading-stars t)
+  (setq org-hide-leading-stars t)
+  ;; Enable custom bullets for TODO items
+  (setq org-superstar-todo-bullet-alist
+        '(("TODO" . ?☐)
+          ("NEXT" . ?✒)
+          ("HOLD" . ?✰)
+          ("WAITING" . ?☕)
+          ("CANCELLED" . ?✘)
+          ("DONE" . ?✔)))
+  (org-superstar-restart))
+(setq org-ellipsis " ▼ ")
+
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
@@ -48,35 +135,8 @@
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 ;; transparency
-(set-frame-parameter (selected-frame) 'alpha '(95 . 95))
-(add-to-list 'default-frame-alist '(alpha . (95 . 95)))
-
-(after! org
-  (setq org-directory "~/org/"
-        org-agenda-files '("~/org/Tasks.org")
-        org-default-notes-file (expand-file-name "Notes.org" org-directory)
-        org-ellipsis " ▼ "
-        org-superstar-headline-bullets-list '("◉" "●" "○" "◆" "●" "○" "◆")
-        org-superstar-itembullet-alist '((?+ . ?➤) (?- . ?✦)) ; changes +/- symbols in item lists
-        org-log-done 'time
-        org-hide-emphasis-markers t
-        ;; ex. of org-link-abbrev-alist in action
-        ;; [[arch-wiki:Name_of_Page][Description]]
-        org-link-abbrev-alist    ; This overwrites the default Doom org-link-abbrev-list
-          '(("google" . "http://www.google.com/search?q=")
-            ("arch-wiki" . "https://wiki.archlinux.org/index.php/")
-            ("ddg" . "https://duckduckgo.com/?q=")
-            ("wiki" . "https://en.wikipedia.org/wiki/"))
-        org-table-convert-region-max-lines 20000
-        org-todo-keywords        ; This overwrites the default Doom org-todo-keywords
-          '((sequence
-             "TODO(t)"           ; A task that is ready to be tackled
-             "GYM(g)"            ; Things to accomplish at the gym
-             "PROJ(p)"           ; A project that contains other tasks
-             "WAIT(w)"           ; Something is holding up this task
-             "|"                 ; The pipe necessary to separate "active" states and "inactive" states
-             "DONE(d)"           ; Task has been completed
-             "CANCELLED(c)" )))) ; Task has been cancelled
+(set-frame-parameter (selected-frame) 'alpha '(100 . 100))
+(add-to-list 'default-frame-alist '(alpha . (100 . 100)))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
