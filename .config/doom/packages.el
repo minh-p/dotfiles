@@ -49,3 +49,17 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 (package! org-superstar)
+(package! ob-mermaid)
+
+(package! tree-sitter
+  :ignore (null (bound-and-true-p module-file-suffix)))
+
+(package! tree-sitter-langs
+  :ignore (null (bound-and-true-p module-file-suffix)))
+
+(package! typescript-mode)
+
+(package! lsp-mode)
+(package! rjsx-mode)
+
+(package! lsp-tailwindcss :recipe (:host github :repo "merrickluo/lsp-tailwindcss"))

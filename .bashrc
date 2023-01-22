@@ -20,7 +20,14 @@ alias tmux='tmux -u'
 alias doom='~/.config/emacs/bin/doom'
 export PATH=$HOME/.cargo/bin:$PATH
 export TERM_TYPE=`pstree -As $$ | awk -F "---" '{print $2}'`
-export QT_QPA_PLATFORM=wayland
+alias run_obs="VK_ICD_FILENAMES=/opt/amdgpu-pro/amd_pro_icd64.json obs"
+# export QT_QPA_PLATFORM=wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
+export JAVA_HOME=/usr/lib/jvm/java-19-openjdk
+export CAPACITOR_ANDROID_STUDIO_PATH=/usr/bin/android-studio
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export ANDROID_HOME=/opt/android-sdk
+alias runandroidavd='QT_QPA_PLATFORM=xcb emulator -feature -Vulkan'
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
