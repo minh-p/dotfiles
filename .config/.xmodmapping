@@ -1,5 +1,0 @@
-!! Compose key to Right Alt
-keycode 108 = Multi_key
-clear   Lock
-keycode 66 = Escape 
-keycode 9 = Caps_Lock
