@@ -1,3 +1,5 @@
 {
-    "SpotifyFixer": true
+    "SpotifyFixer": false,
+    "ZeresPluginLibrary": false,
+    "NoSpotifyPause": false
 }
