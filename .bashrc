@@ -7,10 +7,8 @@
 
 alias wifi='nmtui'
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-eval "$(starship init bash)"
 export VISUAL=nvim;
 export EDITOR=nvim;
 export JOURNAL='/home/hmp/Documents/journal-entries';
@@ -18,7 +16,6 @@ export MPD_HOST="localhost"
 alias updateconfig='config submodule foreach git pull'
 alias tmux='tmux -u'
 alias doom='~/.config/emacs/bin/doom'
-export PATH=$HOME/.cargo/bin:$PATH
 export TERM_TYPE=`pstree -As $$ | awk -F "---" '{print $2}'`
 alias run_obs="VK_ICD_FILENAMES=/opt/amdgpu-pro/amd_pro_icd64.json obs"
 # export QT_QPA_PLATFORM=wayland
@@ -59,3 +56,6 @@ startpythonwebserver() {
     sleep 1
     cd
 }
+
+# terminal prompt
+eval "$(starship init bash)"

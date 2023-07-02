@@ -2,12 +2,12 @@ env:
   TERM: xterm-256color
 
 shell:
-  program: /usr/bin/bash
+  program: /usr/bin/zsh
 
 live_config_reload: true
 
 window:
-  opacity: 0.9
+  opacity: 1
 
 special:
     background: "#101210"
@@ -242,4 +242,4 @@ schemes:
     color13: "#BAC3C6"
     color14: "#CED2D4"
     color15: "#e4e7e8"  
-colors: *sol_light
+colors: *sol_dark
