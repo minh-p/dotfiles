@@ -1,1 +1,1 @@
-thumbnail_viewer=kitty
+thumbnail_viewer=ueberzug
