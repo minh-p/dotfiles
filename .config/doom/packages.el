@@ -63,3 +63,6 @@
 (package! rjsx-mode)
 
 (package! lsp-tailwindcss :recipe (:host github :repo "merrickluo/lsp-tailwindcss"))
+(package! prettier-js)
+(package! flycheck)
+(package! tsi :recipe (:host github :repo "orzechowskid/tsi.el"))
