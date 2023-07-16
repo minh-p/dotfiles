@@ -1,0 +1,2 @@
+#!/bin/bash
+VK_ICD_FILENAMES=/opt/amdgpu-pro/amd_pro_icd64.json obs

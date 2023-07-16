@@ -33,3 +33,14 @@ ANDROID_HOME=/opt/android-sdk
 alias runandroidavd='QT_QPA_PLATFORM=xcb emulator -feature -Vulkan'
 
 eval "$(starship init zsh)"
+
+# X11 and Wayland
+alias spotify="/usr/bin/spotify"
+MOZ_ENABLE_WAYLAND=""
+QT_QPA_PLATFORM="xcb"
+
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+    export QT_QPA_PLATFORM=wayland
+    alias spotify="/usr/bin/spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"
+fi
