@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Spotify Wayland
+Comment=Spotify EnVars Wayland
+Path=/usr/bin/spotify
+Exec="LD_PRELOAD=/usr/lib/spotifywm.so spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"
+Icon=spotify
+Terminal=false
+MimeType=x-scheme-handler/spotify;
+Categories=Audio;AudioVideo;
+X-Desktop-File-Install-Version=0.26
