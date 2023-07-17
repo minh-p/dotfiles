@@ -65,7 +65,7 @@ alias spotify="/usr/bin/spotify"
 export MOZ_ENABLE_WAYLAND=""
 export QT_QPA_PLATFORM="xcb"
 
-if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+if [ -n "$WAYLAND_DISPLAY" ]; then
     export MOZ_ENABLE_WAYLAND=1
     export QT_QPA_PLATFORM=wayland
     alias spotify="/usr/bin/spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"
