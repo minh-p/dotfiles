@@ -30,8 +30,8 @@ bar {
 }
 
 # Appearance/Wallpaper
-output "DP-1" bg /home/hmp/Pictures/Wallpapers/Gate.jpg fill
-output "HDMI-A-1" bg /home/hmp/Pictures/Wallpapers/Gate.jpg fill
+output DP-1 bg /home/hmp/Pictures/Wallpapers/Gate.jpg fill
+output HDMI-A-1 bg /home/hmp/Pictures/Wallpapers/Gate.jpg fill
 
 # Appearance/Rules
 for_window [window_role="dialog"] floating enable
