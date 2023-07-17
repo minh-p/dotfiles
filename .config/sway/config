@@ -35,6 +35,9 @@ output HDMI-A-1 bg /home/hmp/Pictures/Wallpapers/Gate.jpg fill
 
 # Appearance/Rules
 for_window [window_role="dialog"] floating enable
+# Inhibit Idle if an application is in full screen
+for_window [class=".*"] inhibit_idle fullscreen
+for_window [app_id=".*"] inhibit_idle fullscreen
 
 # Appearance/Screen
 output DP-1 {
