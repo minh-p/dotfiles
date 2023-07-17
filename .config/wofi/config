@@ -3,3 +3,5 @@ term=kitty
 hide_scroll=true
 always_parse_args=true
 columns=2
+height=800
+width=1000
