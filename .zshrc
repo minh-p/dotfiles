@@ -41,7 +41,7 @@ QT_QPA_PLATFORM="xcb"
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
     MOZ_ENABLE_WAYLAND=1
-    QT_QPA_PLATFORM=wayland
+    QT_QPA_PLATFORM=wayland-egl
     TERMINAL=foot
     alias spotify="/usr/bin/spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"
 fi
