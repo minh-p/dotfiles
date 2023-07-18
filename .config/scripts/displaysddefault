@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -n $WAYLAND_DISPLAY ]; then
+  imggram=imv
+else
+  imggram=feh
+fi
+
+$imggram /tmp/sddefault

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+  exit 1
+fi
+
+url="$1"
+
+touch "/tmp/sddefault"
+curl -sL "$(yt-dlp --get-thumbnail $1)" > "/tmp/sddefault"
