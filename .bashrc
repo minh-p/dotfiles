@@ -9,8 +9,8 @@ alias wifi='nmtui'
 alias ls='ls --color=auto'
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-export VISUAL=nvim;
-export EDITOR=nvim;
+export VISUAL=nvim
+export EDITOR=nvim
 export JOURNAL='/home/hmp/Documents/journal-entries';
 export MPD_HOST="localhost"
 alias updateconfig='config submodule foreach git pull'
@@ -68,5 +68,6 @@ export QT_QPA_PLATFORM="xcb"
 if [ -n "$WAYLAND_DISPLAY" ]; then
     export MOZ_ENABLE_WAYLAND=1
     export QT_QPA_PLATFORM=wayland
+    export TERMINAL=foot
     alias spotify="/usr/bin/spotify --enable-features=UseOzonePlatform --ozone-platform=wayland"
 fi
