@@ -239,3 +239,13 @@
         flycheck-standard-error-navigation t
         flycheck-deferred-syntax-check nil)
   )
+
+(setq org-feed-alist
+      '(("Tech"
+        "https://lukesmith.xyz/rss.xml"
+         "~/txt/org/feeds.org" "Based Tech Content")
+
+        ("Slashdot"
+         "https://rss.slashdot.org/Slashdot/slashdot"
+         "~/txt/org/feeds.org" "Slashdot Entries")
+        ))
