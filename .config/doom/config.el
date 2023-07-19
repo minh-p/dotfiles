@@ -33,7 +33,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;(setq doom-theme 'doom-acario-light)
-(setq doom-theme 'doom-solarized-dark)
+(setq doom-theme 'doom-tokyo-night)
 (setq ob-mermaid-cli-path "/usr/bin/mmdc")
 
 (defun dw/org-mode-setup ()
