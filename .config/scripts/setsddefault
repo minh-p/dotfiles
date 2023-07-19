@@ -1,10 +1,12 @@
 #!/bin/sh
 
-if [ -z "$1" ]; then
+if [ -z "$1" ] || [ -z "$2" ]; then
   exit 1
 fi
 
-url="$1"
 
-touch "/tmp/sddefault"
-curl -sL "$(yt-dlp --get-thumbnail $1)" > "/tmp/sddefault"
+url="$1"
+filename="$2"
+
+touch /tmp/$filename
+curl -sL "$(yt-dlp --get-thumbnail $1)" > /tmp/$filename

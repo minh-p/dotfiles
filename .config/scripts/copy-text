@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -n $WAYLAND_DISPLAY ]; then
+  echo wl-copy
+else
+  echo "xclip -s primary -i"
+fi
