@@ -59,4 +59,4 @@ macro R set browser "displaysddefault youtube-thumbnail %u &"; open-in-browser ;
 macro N set browser "setsddefault %u nitter-thumbnail &"; open-in-browser ; set browser linkhandler
 macro M set browser "displaysddefault nitter-thumbnail %u &"; open-in-browser ; set browser linkhandler
 
-macro C set browser "linkhandler $(yt-dlp --get-url %u)"; open-in-browser; set browser linkhandler
+macro C set browser "linkhandler $(yt-dlp --get-url %u) &"; open-in-browser; set browser linkhandler
