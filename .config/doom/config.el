@@ -34,7 +34,12 @@
 ;; `load-theme' function. This is the default:
 ;;(setq doom-theme 'doom-acario-light)
 (setq doom-theme 'doom-tokyo-night)
+(setq doom-font (font-spec :family "JetBrains Mono" :size 22 :weight 'regular))
 (setq ob-mermaid-cli-path "/usr/bin/mmdc")
+
+(use-package! centered-window
+  :config
+  (centered-window-mode t))
 
 (defun dw/org-mode-setup ()
   (org-indent-mode t)
@@ -44,17 +49,17 @@
   (setq evil-auto-indent nil))
 
 
-(use-package org
+(use-package! org
   :hook (org-mode . dw/org-mode-setup)
   :config
   (setq org-ellipsis " ▾"
         org-hide-emphasis-markers t
         org-pretty-entities t
-        org-clock-sound "~/.config/emacs/bell.wav"
+        org-clock-sound "~/.config/sounds/bell.wav"
 	org-startup-with-inline-images t
 	org-hide-leading-stars t
 	org-directory "~/org"
-	org-agenda-files '("Tasks.org" "Birthdays.org" "Habits.org")
+	org-agenda-files '("Tasks.org" "Habits.org")
 	org-agenda-start-with-log-mode t
 	org-log-done 'time
 	org-log-into-drawer t
@@ -75,7 +80,7 @@
                 (org-level-6 . 1.1)
                 (org-level-7 . 1.1)
                 (org-level-8 . 1.1)))
-    (set-face-attribute (car face) nil :font "JetBrainsMono Nerd Font" :weight 'regular :height (cdr face)))
+    (set-face-attribute (car face) nil :font "JetBrains Mono" :weight 'regular :height (cdr face)))
 
 (org-babel-do-load-languages 'org-babel-load-languages
     '(
@@ -137,9 +142,11 @@
                 eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
+(add-hook 'org-mode-hook #'valign-mode)
+
 ;; transparency
-(set-frame-parameter (selected-frame) 'alpha '(100 . 100))
-(add-to-list 'default-frame-alist '(alpha . (100 . 100)))
+(set-frame-parameter (selected-frame) 'alpha '(97 . 97))
+(add-to-list 'default-frame-alist '(alpha . (97 . 97)))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -173,7 +180,15 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(use-package tree-sitter
+(defun pug-compile-saved-file()
+  (when (and (stringp buffer-file-name)
+             (string-match "\\.pug\\'" buffer-file-name))
+    (pug-compile)))
+
+(after! pug-mode
+  (add-hook 'after-save-hook 'pug-compile-saved-file))
+
+(use-package! tree-sitter
   :commands (tree-sitter-mode)
   :when (bound-and-true-p module-file-suffix)
   :hook (prog-mode . tree-sitter-mode)
@@ -194,7 +209,7 @@
                                (error-message-string e))
          (signal (car e) (cadr e)))))))
 
-(use-package typescript-mode
+(use-package! typescript-mode
   :mode ("\\.tsx\\'" . typescript-tsx-tree-sitter-mode)
   :config
   (setq typescript-indent-level 2)
@@ -205,7 +220,7 @@
 
 ;; https://github.com/orzechowskid/tsi.el/
 ;; great tree-sitter-based indentation for typescript/tsx, css, json
-(use-package tsi
+(use-package! tsi
   ;; define autoload definitions which when actually invoked will cause package to be loaded
   :commands (tsi-typescript-mode tsi-json-mode tsi-css-mode)
   :init
@@ -218,7 +233,7 @@
   (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
   (lsp-headerline-breadcrumb-mode))
 
-(use-package lsp-mode
+(use-package! lsp-mode
   :commands (lsp lsp-deferred)
   :hook (lsp-mode . efs/lsp-mode-setup)
   :init
@@ -228,7 +243,7 @@
 
 (use-package! lsp-tailwindcss)
 
-(use-package flycheck
+(use-package! flycheck
   :diminish flycheck-mode
   :init
   (setq flycheck-check-syntax-automatically '(save new-line)

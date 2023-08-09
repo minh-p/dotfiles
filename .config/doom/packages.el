@@ -66,3 +66,6 @@
 (package! prettier-js)
 (package! flycheck)
 (package! tsi :recipe (:host github :repo "orzechowskid/tsi.el"))
+(package! pug-mode)
+(package! valign)
+(package! centered-window)
