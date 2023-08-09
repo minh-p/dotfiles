@@ -1,2 +1,2 @@
 #!/bin/sh
-systemctl --user start foot-server@${WAYLAND_DISPLAY}.socket
+systemctl --user start foot-server
