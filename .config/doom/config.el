@@ -46,7 +46,7 @@
   (variable-pitch-mode 1)
   (auto-fill-mode 0)
   (visual-line-mode 1)
-  (setq evil-auto-indent nil))
+  (setq evil-auto-indent ))
 
 
 (use-package! org
