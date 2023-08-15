@@ -41,7 +41,7 @@ visualizer_color = "33,39,63,75,81,99,117,153,189"
 
 # PROGRESS BAR
 # ---
-progressbar_look = "   "
+progressbar_look = "___"
 progressbar_color = "black"
 progressbar_elapsed_color = "yellow"
 
@@ -53,9 +53,9 @@ color2 = "blue"
 
 # UI VISIBILITY
 # ---
-header_visibility = "no"
-statusbar_visibility = "no"
-titles_visibility = "no"
+header_visibility = "yes"
+statusbar_visibility = "yes"
+titles_visibility = "yes"
 
 # UI APPEARANCE
 # ---
