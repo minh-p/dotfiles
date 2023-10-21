@@ -39,14 +39,14 @@
 
 (use-package! centered-window
   :config
-  (centered-window-mode t))
+  (centered-window-mode 0))
 
 (defun dw/org-mode-setup ()
   (org-indent-mode t)
   (variable-pitch-mode 1)
   (auto-fill-mode 0)
   (visual-line-mode 1)
-  (setq evil-auto-indent ))
+  (setq evil-auto-indent 1))
 
 
 (use-package! org
@@ -86,6 +86,7 @@
     '(
         (shell . t)
         (mermaid . t)
+        (java . t)
     )
 )
 
@@ -180,14 +181,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(defun pug-compile-saved-file()
-  (when (and (stringp buffer-file-name)
-             (string-match "\\.pug\\'" buffer-file-name))
-    (pug-compile)))
-
-(after! pug-mode
-  (add-hook 'after-save-hook 'pug-compile-saved-file))
-
 (use-package! tree-sitter
   :commands (tree-sitter-mode)
   :when (bound-and-true-p module-file-suffix)
@@ -225,7 +218,7 @@
   :commands (tsi-typescript-mode tsi-json-mode tsi-css-mode)
   :init
   (add-hook 'typescript-mode-hook (lambda () (tsi-typescript-mode 1)))
-  (add-hook 'json-mode-hook (lambda () (tsi-json-mode 1)))
+  (add-hook 'json-mode-hook (lambda () (tsi-json-mode 1) (setq indent-tabs-mode nil)))
   (add-hook 'css-mode-hook (lambda () (tsi-css-mode 1)))
   (add-hook 'scss-mode-hook (lambda () (tsi-scss-mode 1))))
 
@@ -264,3 +257,7 @@
          "https://rss.slashdot.org/Slashdot/slashdot"
          "~/txt/org/feeds.org" "Slashdot Entries")
         ))
+
+(add-hook 'server-switch-hook 'magit-commit-diff)
+
+(push (list 'output-pdf "Sioyek") TeX-view-program-selection)

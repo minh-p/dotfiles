@@ -69,3 +69,5 @@
 (package! pug-mode)
 (package! valign)
 (package! centered-window)
+(package! org-tree-slide)
+(package! auctex)
