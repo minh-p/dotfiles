@@ -71,3 +71,4 @@
 (package! centered-window)
 (package! org-tree-slide)
 (package! auctex)
+(package! org-roam)

@@ -1,6 +1,3 @@
-;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
-
-;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
 
@@ -33,7 +30,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;(setq doom-theme 'doom-acario-light)
-(setq doom-theme 'doom-tokyo-night)
+(setq doom-theme 'doom-solarized-dark)
 (setq doom-font (font-spec :family "JetBrains Mono" :size 22 :weight 'regular))
 (setq ob-mermaid-cli-path "/usr/bin/mmdc")
 
@@ -260,4 +257,7 @@
 
 (add-hook 'server-switch-hook 'magit-commit-diff)
 
-(push (list 'output-pdf "Sioyek") TeX-view-program-selection)
+;; Org Roam
+(setq org-roam-directory (file-truename "~/org-roam"))
+(setq find-file-visit-truename t)
+(org-roam-db-autosync-mode)
