@@ -50,6 +50,7 @@
 ;(unpin! t)
 (package! org-superstar)
 (package! ob-mermaid)
+(package! mermaid-mode)
 
 (package! tree-sitter
   :ignore (null (bound-and-true-p module-file-suffix)))
@@ -72,3 +73,4 @@
 (package! org-tree-slide)
 (package! auctex)
 (package! org-roam)
+(package! ox-pandoc)

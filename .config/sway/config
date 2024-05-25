@@ -6,6 +6,7 @@ set $menu wofi --show run
 set $term footclient
 set $editor emacsclient -c -a 'emacs'
 set $browser $userdir/.config/scripts/firefox-wl
+set $browser2 $userdir/.config/scripts/brave-wl
 
 set $left h
 set $down j
@@ -43,6 +44,7 @@ for_window [app_id="mpv"] floating enable
 # Inhibit Idle if an application is in full screen
 for_window [class=".*"] inhibit_idle fullscreen
 for_window [app_id=".*"] inhibit_idle fullscreen
+for_window [workspace="7"] floating enable
 
 # Appearance/Screen
 output DP-1 {
@@ -69,6 +71,7 @@ mouse_warping output
 bindsym $mod+Shift+Return exec $term
 bindsym $mod+Shift+e exec $editor
 bindsym $mod+Shift+b exec $browser
+bindsym $mod+Shift+n exec $browser2
 bindsym $mod+q kill
 bindsym $mod+d exec $menu
 

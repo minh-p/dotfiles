@@ -1,6 +1,5 @@
 ;; sync' after modifying this file!
 
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Vu Huy Minh Pham"
@@ -30,7 +29,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;(setq doom-theme 'doom-acario-light)
-(setq doom-theme 'doom-solarized-dark)
+(setq doom-theme 'doom-solarized-light)
 (setq doom-font (font-spec :family "JetBrains Mono" :size 22 :weight 'regular))
 (setq ob-mermaid-cli-path "/usr/bin/mmdc")
 
@@ -56,7 +55,7 @@
 	org-startup-with-inline-images t
 	org-hide-leading-stars t
 	org-directory "~/org"
-	org-agenda-files '("Tasks.org" "Habits.org")
+	org-agenda-files '("Tasks.org" "Habits.org" "~/org-roam/daily")
 	org-agenda-start-with-log-mode t
 	org-log-done 'time
 	org-log-into-drawer t
@@ -261,3 +260,12 @@
 (setq org-roam-directory (file-truename "~/org-roam"))
 (setq find-file-visit-truename t)
 (org-roam-db-autosync-mode)
+
+(dap-register-debug-template "My Runner"
+                             (list :type "java"
+                                   :request "launch"
+                                   :args ""
+                                   :vmArgs "-ea -Dmyapp.instance.name=myapp_1"
+                                   :projectName "myapp"
+                                   :mainClass "com.domain.AppRunner"
+                                   :env '(("DEV" . "1"))))

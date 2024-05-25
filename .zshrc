@@ -26,7 +26,7 @@ tmux='tmux -u'
 doom='~/.config/emacs/bin/doom'
 alias run_obs="VK_ICD_FILENAMES=/opt/amdgpu-pro/amd_pro_icd64.json obs"
 _JAVA_AWT_WM_NONREPARENTING=1
-JAVA_HOME=/usr/lib/jvm/java-19-openjdk
+JAVA_HOME=/usr/lib/jvm/java-22-openjdk
 CAPACITOR_ANDROID_STUDIO_PATH=/usr/bin/android-studio
 ANDROID_SDK_ROOT=/opt/android-sdk
 ANDROID_HOME=/opt/android-sdk

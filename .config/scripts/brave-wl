@@ -1,0 +1,2 @@
+#!/bin/sh
+exec brave --enable-features=UseOzonePlatform --ozone-platform=wayland

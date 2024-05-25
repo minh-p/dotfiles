@@ -37,195 +37,195 @@ family = "DejaVu Sans Mono"
 family = "DejaVu Sans Mono"
 style = "italic"
 
-[schemes.codedark.bright]
-black = "#545454"
-blue = "#569cd6"
-cyan = "#56b6c2"
-green = "#608b4e"
-magenta = "#c678dd"
-red = "#f44747"
-white = "#d4d4d4"
-yellow = "#dcdcaa"
-
-[schemes.codedark.cursor]
-cursor = "#d4d4d4"
-text = "#d4d4d4"
-
-[schemes.codedark.normal]
-black = "#1e1e1e"
-blue = "#569cd6"
-cyan = "#56b6c2"
-green = "#608b4e"
-magenta = "#c678dd"
-red = "#f44747"
-white = "#d4d4d4"
-yellow = "#dcdcaa"
-
-[schemes.codedark.primary]
-background = "#1e1e1e"
-foreground = "#d4d4d4"
-
-[schemes.codelight.bright]
-black = "#1e1e1e"
-blue = "#007acc"
-cyan = "#56b6c2"
-green = "#009000"
-magenta = "#af00db"
-red = "#c72e0f"
-white = "#d4d4d4"
-yellow = "#795e25"
-
-[schemes.codelight.cursor]
-cursor = "#d4d4d4"
-text = "#d4d4d4"
-
-[schemes.codelight.normal]
-black = "#1e1e1e"
-blue = "#007acc"
-cyan = "#56b6c2"
-green = "#009000"
-magenta = "#af00db"
-red = "#c72e0f"
-white = "#d4d4d4"
-yellow = "#795e25"
-
-[schemes.codelight.primary]
-background = "#ffffff"
-foreground = "#1e1e1e"
-
-[schemes.cold.bright]
-black = "0x676767"
-blue = "0x6871FF"
-cyan = "0x5FFDFF"
-green = "0x5FF967"
-magenta = "0xFF76FF"
-red = "0xFF6D67"
-white = "0xFEFFFF"
-yellow = "0xFEFB67"
-
-[schemes.cold.cursor]
-cursor = "0xc7c7c7"
-text = "0xFEFFFF"
-
-[schemes.cold.normal]
-black = "0x000000"
-blue = "0x9BB8DC"
-cyan = "0x00C5C7"
-green = "0x83AC8E"
-magenta = "0xBAACE2"
-red = "0xE68E8E"
-white = "0xC7C7C7"
-yellow = "0xF5B78A"
-
-[schemes.cold.primary]
-background = "0x16171E"
-foreground = "0xD1D2D3"
-
-[schemes.custom]
-color0 = "#0C0D0E"
-color1 = "#77858F"
-color10 = "#939CA2"
-color11 = "#AAB2B6"
-color12 = "#B3BCC1"
-color13 = "#BAC3C6"
-color14 = "#CED2D4"
-color15 = "#e4e7e8"
-color2 = "#939CA2"
-color3 = "#AAB2B6"
-color4 = "#B3BCC1"
-color5 = "#BAC3C6"
-color6 = "#CED2D4"
-color7 = "#e4e7e8"
-color8 = "#9fa1a2"
-color9 = "#77858F"
-
-[schemes.solarized.bright]
-black = "0x002b36"
-blue = "0x839496"
-cyan = "0x93a1a1"
-green = "0x586e75"
-magenta = "0x6c71c4"
-red = "0xcb4b16"
-white = "0xfdf6e3"
-yellow = "0x657b83"
-
-[schemes.solarized.normal]
-black = "0x073642"
-blue = "0x268bd2"
-cyan = "0x2aa198"
-green = "0x859900"
-magenta = "0xd33682"
-red = "0xdc322f"
-white = "0xeee8d5"
-yellow = "0xb58900"
-
-[schemes.solarized.primary]
-background = "0x002b36"
-foreground = "0x839496"
-
-[schemes.tokyo-night.bright]
-black = "0x444b6a"
-blue = "0x7da6ff"
-cyan = "0x0db9d7"
-green = "0xb9f27c"
-magenta = "0xbb9af7"
-red = "0xff7a93"
-white = "0xacb0d0"
-yellow = "0xff9e64"
-
-[schemes.tokyo-night.normal]
-black = "0x32344a"
-blue = "0x7aa2f7"
-cyan = "0x449dab"
-green = "0x9ece6a"
-magenta = "0xad8ee6"
-red = "0xf7768e"
-white = "0x787c99"
-yellow = "0xe0af68"
-
-[schemes.tokyo-night.primary]
-background = "0x1a1b26"
-foreground = "0xa9b1d6"
-
-[[schemes.tokyo-night-storm.indexed_colors]]
-color = "0xff9e64"
-index = 16
-
-[[schemes.tokyo-night-storm.indexed_colors]]
-color = "0xdb4b4b"
-index = 17
-
-[schemes.tokyo-night-storm.bright]
-black = "0x444b6a"
-blue = "0x7da6ff"
-cyan = "0x0db9d7"
-green = "0xb9f27c"
-magenta = "0xbb9af7"
-red = "0xff7a93"
-white = "0xacb0d0"
-yellow = "0xff9e64"
-
-[schemes.tokyo-night-storm.normal]
-black = "0x32344a"
-blue = "0x7aa2f7"
-cyan = "0x449dab"
-green = "0x9ece6a"
-magenta = "0xad8ee6"
-red = "0xf7768e"
-white = "0x9699a8"
-yellow = "0xe0af68"
-
-[schemes.tokyo-night-storm.primary]
-background = "0x24283b"
-foreground = "0xa9b1d6"
+# [schemes.codedark.bright]
+# black = "#545454"
+# blue = "#569cd6"
+# cyan = "#56b6c2"
+# green = "#608b4e"
+# magenta = "#c678dd"
+# red = "#f44747"
+# white = "#d4d4d4"
+# yellow = "#dcdcaa"
+# 
+# [schemes.codedark.cursor]
+# cursor = "#d4d4d4"
+# text = "#d4d4d4"
+# 
+# [schemes.codedark.normal]
+# black = "#1e1e1e"
+# blue = "#569cd6"
+# cyan = "#56b6c2"
+# green = "#608b4e"
+# magenta = "#c678dd"
+# red = "#f44747"
+# white = "#d4d4d4"
+# yellow = "#dcdcaa"
+# 
+# [schemes.codedark.primary]
+# background = "#1e1e1e"
+# foreground = "#d4d4d4"
+# 
+# [schemes.codelight.bright]
+# black = "#1e1e1e"
+# blue = "#007acc"
+# cyan = "#56b6c2"
+# green = "#009000"
+# magenta = "#af00db"
+# red = "#c72e0f"
+# white = "#d4d4d4"
+# yellow = "#795e25"
+# 
+# [schemes.codelight.cursor]
+# cursor = "#d4d4d4"
+# text = "#d4d4d4"
+# 
+# [schemes.codelight.normal]
+# black = "#1e1e1e"
+# blue = "#007acc"
+# cyan = "#56b6c2"
+# green = "#009000"
+# magenta = "#af00db"
+# red = "#c72e0f"
+# white = "#d4d4d4"
+# yellow = "#795e25"
+# 
+# [schemes.codelight.primary]
+# background = "#ffffff"
+# foreground = "#1e1e1e"
+# 
+# [schemes.cold.bright]
+# black = "0x676767"
+# blue = "0x6871FF"
+# cyan = "0x5FFDFF"
+# green = "0x5FF967"
+# magenta = "0xFF76FF"
+# red = "0xFF6D67"
+# white = "0xFEFFFF"
+# yellow = "0xFEFB67"
+# 
+# [schemes.cold.cursor]
+# cursor = "0xc7c7c7"
+# text = "0xFEFFFF"
+# 
+# [schemes.cold.normal]
+# black = "0x000000"
+# blue = "0x9BB8DC"
+# cyan = "0x00C5C7"
+# green = "0x83AC8E"
+# magenta = "0xBAACE2"
+# red = "0xE68E8E"
+# white = "0xC7C7C7"
+# yellow = "0xF5B78A"
+# 
+# [schemes.cold.primary]
+# background = "0x16171E"
+# foreground = "0xD1D2D3"
+# 
+# [schemes.custom]
+# color0 = "#0C0D0E"
+# color1 = "#77858F"
+# color10 = "#939CA2"
+# color11 = "#AAB2B6"
+# color12 = "#B3BCC1"
+# color13 = "#BAC3C6"
+# color14 = "#CED2D4"
+# color15 = "#e4e7e8"
+# color2 = "#939CA2"
+# color3 = "#AAB2B6"
+# color4 = "#B3BCC1"
+# color5 = "#BAC3C6"
+# color6 = "#CED2D4"
+# color7 = "#e4e7e8"
+# color8 = "#9fa1a2"
+# color9 = "#77858F"
+# 
+# [schemes.solarized.bright]
+# black = "0x002b36"
+# blue = "0x839496"
+# cyan = "0x93a1a1"
+# green = "0x586e75"
+# magenta = "0x6c71c4"
+# red = "0xcb4b16"
+# white = "0xfdf6e3"
+# yellow = "0x657b83"
+# 
+# [schemes.solarized.normal]
+# black = "0x073642"
+# blue = "0x268bd2"
+# cyan = "0x2aa198"
+# green = "0x859900"
+# magenta = "0xd33682"
+# red = "0xdc322f"
+# white = "0xeee8d5"
+# yellow = "0xb58900"
+# 
+# [schemes.solarized.primary]
+# background = "0x002b36"
+# foreground = "0x839496"
+# 
+# [schemes.tokyo-night.bright]
+# black = "0x444b6a"
+# blue = "0x7da6ff"
+# cyan = "0x0db9d7"
+# green = "0xb9f27c"
+# magenta = "0xbb9af7"
+# red = "0xff7a93"
+# white = "0xacb0d0"
+# yellow = "0xff9e64"
+# 
+# [schemes.tokyo-night.normal]
+# black = "0x32344a"
+# blue = "0x7aa2f7"
+# cyan = "0x449dab"
+# green = "0x9ece6a"
+# magenta = "0xad8ee6"
+# red = "0xf7768e"
+# white = "0x787c99"
+# yellow = "0xe0af68"
+# 
+# [schemes.tokyo-night.primary]
+# background = "0x1a1b26"
+# foreground = "0xa9b1d6"
+# 
+# [[schemes.tokyo-night-storm.indexed_colors]]
+# color = "0xff9e64"
+# index = 16
+# 
+# [[schemes.tokyo-night-storm.indexed_colors]]
+# color = "0xdb4b4b"
+# index = 17
+# 
+# [schemes.tokyo-night-storm.bright]
+# black = "0x444b6a"
+# blue = "0x7da6ff"
+# cyan = "0x0db9d7"
+# green = "0xb9f27c"
+# magenta = "0xbb9af7"
+# red = "0xff7a93"
+# white = "0xacb0d0"
+# yellow = "0xff9e64"
+# 
+# [schemes.tokyo-night-storm.normal]
+# black = "0x32344a"
+# blue = "0x7aa2f7"
+# cyan = "0x449dab"
+# green = "0x9ece6a"
+# magenta = "0xad8ee6"
+# red = "0xf7768e"
+# white = "0x9699a8"
+# yellow = "0xe0af68"
+# 
+# [schemes.tokyo-night-storm.primary]
+# background = "0x24283b"
+# foreground = "0xa9b1d6"
 
 [shell]
 program = "/usr/bin/zsh"
 
-[special]
-background = "#101210"
-cursor = "#b2b7b9"
-foreground = "#b2b7b9"
+# [special]
+# background = "#101210"
+# cursor = "#b2b7b9"
+# foreground = "#b2b7b9"
 
 [window]
 opacity = 1
